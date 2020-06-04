@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="cinemaTicket" Class="cinemaTicketManagerDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-QVL18E1;Initial Catalog=cinemaTicket;Persist Security Info=True;User ID=sa" SettingsObjectName="cinemaTicketManager.Properties.Settings" SettingsPropertyName="cinemaTicketConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.showTicket" Member="showTickets">
+    <Type Name="showTicket">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buyer" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="totalPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="showDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="timeName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="timeBegin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="film" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="room" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="seatName" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="createdName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="createdBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.showCalender" Member="showCalenders">
+    <Type Name="showCalender">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="film" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="timeName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="timeBegin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="room" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="showDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="extraPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ticket" Member="tickets">
+    <Type Name="ticket">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="createdBy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="buyer" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="sale" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="seat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="calenderShow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="totalPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="seat_ticket" Member="seat1" ThisKey="seat" OtherKey="id" Type="seat" IsForeignKey="true" />
+      <Association Name="calendershow_ticket" Member="calendershow1" ThisKey="calenderShow" OtherKey="id" Type="calendershow" IsForeignKey="true" />
+      <Association Name="account_ticket" Member="account" ThisKey="createdBy" OtherKey="id" Type="account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.showtime" Member="showtimes">
+    <Type Name="showtime">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="timeName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="timeBegin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="timeEnd" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="showtime_calendershow" Member="calendershows" ThisKey="id" OtherKey="showTime" Type="calendershow" />
+    </Type>
+  </Table>
+  <Table Name="dbo.showroom" Member="showrooms">
+    <Type Name="showroom">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="roomName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="showroom_calendershow" Member="calendershows" ThisKey="id" OtherKey="showRoom" Type="calendershow" />
+    </Type>
+  </Table>
+  <Table Name="dbo.seat" Member="seats">
+    <Type Name="seat">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="seatName" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="seat_ticket" Member="tickets" ThisKey="id" OtherKey="seat" Type="ticket" />
+    </Type>
+  </Table>
+  <Table Name="dbo.film" Member="films">
+    <Type Name="film">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="filmName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="image" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="director" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="casts" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ariDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="numDateShow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="content" Type="System.String" DbType="NVarChar(4000) NOT NULL" CanBeNull="false" />
+      <Column Name="catId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="film_calendershow" Member="calendershows" ThisKey="id" OtherKey="film" Type="calendershow" />
+      <Association Name="category_film" Member="category" ThisKey="catId" OtherKey="id" Type="category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.category" Member="categories">
+    <Type Name="category">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="catName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Association Name="category_film" Member="films" ThisKey="id" OtherKey="catId" Type="film" />
+    </Type>
+  </Table>
+  <Table Name="dbo.calendershow" Member="calendershows">
+    <Type Name="calendershow">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="film" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="showRoom" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="showTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="showDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="extraPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="calendershow_ticket" Member="tickets" ThisKey="id" OtherKey="calenderShow" Type="ticket" />
+      <Association Name="showroom_calendershow" Member="showroom1" ThisKey="showRoom" OtherKey="id" Type="showroom" IsForeignKey="true" />
+      <Association Name="showtime_calendershow" Member="showtime1" ThisKey="showTime" OtherKey="id" Type="showtime" IsForeignKey="true" />
+      <Association Name="film_calendershow" Member="film1" ThisKey="film" OtherKey="id" Type="film" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.account" Member="accounts">
+    <Type Name="account">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="dob" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="role" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="account_ticket" Member="tickets" ThisKey="id" OtherKey="createdBy" Type="ticket" />
+    </Type>
+  </Table>
+  <Function Name="dbo.insertTicket" Method="insertTicket">
+    <Parameter Name="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="buyer" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="createdDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="sale" Type="System.Double" DbType="Float" />
+    <Parameter Name="seat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="calender" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

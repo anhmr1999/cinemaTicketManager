@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 11.125" name="cinemaTicketManager">
+  <DataContextMoniker Name="/cinemaTicketManagerDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8c804301-e1c5-4927-8eb3-0012ca089f8b" absoluteBounds="8.75, 4.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/showTicket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="295afa50-ed42-467d-b913-b4a5ccf15466" absoluteBounds="8.765, 5.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ffaf232d-4659-43db-9743-78d0028dc252" absoluteBounds="8.75, 8.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/showCalender" />
+      <nestedChildShapes>
+        <elementListCompartment Id="232f8694-5fa6-4a8d-9579-b5829f6fec22" absoluteBounds="8.765, 9.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c50fc17-747b-4b47-ba3c-5195ed61c1a6" absoluteBounds="9, 1.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/ticket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c027b16-0a72-44e1-9760-ea8ff85704aa" absoluteBounds="9.015, 1.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17cdb612-9970-475e-9d32-c75f5ef3b063" absoluteBounds="3.5, 6.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/showtime" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25e1ca60-7e2c-459a-8192-a1918825e90a" absoluteBounds="3.515, 7.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06abff69-ceb8-4701-98b7-ed3911f29e3b" absoluteBounds="3.5, 4.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/showroom" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fde6f790-f729-4174-8c70-050897198cbb" absoluteBounds="3.515, 4.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="238ca426-d9c2-4c55-bd3d-5421f53e98d5" absoluteBounds="6.25, 4.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/seat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0db7e02-3458-4410-b19e-fe2199e536e8" absoluteBounds="6.265, 5.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="876eb839-3d83-4e57-a372-dea7f5207afa" absoluteBounds="3.5, 1, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/film" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f552ff4e-2c70-4a70-9dfd-3d056105394a" absoluteBounds="3.515, 1.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="815d54b0-5472-4f19-9bcf-dbe64fd88697" absoluteBounds="0.75, 1.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95346046-ecb9-4b3b-b9f2-a1c3112d52cb" absoluteBounds="0.765, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d5ea650-9d7b-4427-bd94-a91e5437a228" absoluteBounds="6.25, 1.375, 2, 1.9631982421874998">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/calendershow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79052bfd-7554-4deb-847f-3a6f5209e0ca" absoluteBounds="6.265, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4740c72-0d0c-4599-9e7e-69e58a5f0be0" absoluteBounds="6.25, 7, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/cinemaTicketManagerDataContext/account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29387f43-ad77-41d2-844b-18f482cafd83" absoluteBounds="6.265, 7.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 4.65625); (10.90625 : 4.65625); (10.90625 : 3.47280110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/cinemaTicketManagerDataContext/seat/seat_ticket" />
+      <nodes>
+        <classShapeMoniker Id="238ca426-d9c2-4c55-bd3d-5421f53e98d5" />
+        <classShapeMoniker Id="5c50fc17-747b-4b47-ba3c-5195ed61c1a6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.34699625651042); (3.5 : 2.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/cinemaTicketManagerDataContext/category/category_film" />
+      <nodes>
+        <classShapeMoniker Id="815d54b0-5472-4f19-9bcf-dbe64fd88697" />
+        <classShapeMoniker Id="876eb839-3d83-4e57-a372-dea7f5207afa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.35659912109375); (9 : 2.35659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/cinemaTicketManagerDataContext/calendershow/calendershow_ticket" />
+      <nodes>
+        <classShapeMoniker Id="2d5ea650-9d7b-4427-bd94-a91e5437a228" />
+        <classShapeMoniker Id="5c50fc17-747b-4b47-ba3c-5195ed61c1a6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.5); (5.875 : 4.125); (5.875 : 2.35659912109375); (6.25 : 2.35659912109375)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/cinemaTicketManagerDataContext/showroom/showroom_calendershow" />
+      <nodes>
+        <classShapeMoniker Id="06abff69-ceb8-4701-98b7-ed3911f29e3b" />
+        <classShapeMoniker Id="2d5ea650-9d7b-4427-bd94-a91e5437a228" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.68692851096755); (6.0625 : 6.12442851096755); (6.0625 : 2.87865068164062); (6.25 : 2.87865068164062)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/cinemaTicketManagerDataContext/showtime/showtime_calendershow" />
+      <nodes>
+        <classShapeMoniker Id="17cdb612-9970-475e-9d32-c75f5ef3b063" />
+        <classShapeMoniker Id="2d5ea650-9d7b-4427-bd94-a91e5437a228" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.80329956054687); (6.25 : 1.80329956054687)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/cinemaTicketManagerDataContext/film/film_calendershow" />
+      <nodes>
+        <classShapeMoniker Id="876eb839-3d83-4e57-a372-dea7f5207afa" />
+        <classShapeMoniker Id="2d5ea650-9d7b-4427-bd94-a91e5437a228" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 8.30850341796875); (10.8749975 : 8.30850341796875); (10.8749975 : 3.47280110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/cinemaTicketManagerDataContext/account/account_ticket" />
+      <nodes>
+        <classShapeMoniker Id="b4740c72-0d0c-4599-9e7e-69e58a5f0be0" />
+        <classShapeMoniker Id="5c50fc17-747b-4b47-ba3c-5195ed61c1a6" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
