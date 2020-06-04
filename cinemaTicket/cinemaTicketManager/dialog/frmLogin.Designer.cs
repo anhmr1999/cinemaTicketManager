@@ -167,6 +167,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Login ";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.Shown += new System.EventHandler(this.frmLogin_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

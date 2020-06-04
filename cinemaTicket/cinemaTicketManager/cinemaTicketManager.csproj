@@ -304,6 +304,10 @@
     <None Include="bin\Debug\img\videos_video_media_cinema_1725.png" />
     <None Include="bin\Debug\img\Warning.png" />
     <None Include="bin\Debug\img\chart.png" />
+    <None Include="bin\Debug\icon\after.png" />
+    <None Include="bin\Debug\icon\next.png" />
+    <None Include="bin\Debug\icon\nextToEnd.png" />
+    <None Include="bin\Debug\icon\nextToFirst.png" />
     <Content Include="DataBase\cinemaTicketData.sql" />
     <Content Include="DataBase\cinemaTicketDatabase.sql" />
   </ItemGroup>

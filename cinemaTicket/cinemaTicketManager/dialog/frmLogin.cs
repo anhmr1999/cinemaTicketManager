@@ -85,5 +85,10 @@ namespace cinemaTicketManager.dialog
 
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

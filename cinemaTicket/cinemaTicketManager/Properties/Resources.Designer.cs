@@ -73,6 +73,16 @@ namespace cinemaTicketManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap after {
+            get {
+                object obj = ResourceManager.GetObject("after", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chart {
             get {
                 object obj = ResourceManager.GetObject("chart", resourceCulture);
@@ -136,6 +146,36 @@ namespace cinemaTicketManager.Properties {
         internal static System.Drawing.Bitmap main {
             get {
                 object obj = ResourceManager.GetObject("main", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap next {
+            get {
+                object obj = ResourceManager.GetObject("next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nextToEnd {
+            get {
+                object obj = ResourceManager.GetObject("nextToEnd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nextToFirst {
+            get {
+                object obj = ResourceManager.GetObject("nextToFirst", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
