@@ -52,20 +52,27 @@ namespace cinemaTicketManager.dialog
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            int result = dataContext.insertTicket(mainForm.userLogin.id, txtBuyer.Text, DateTime.Today, double.Parse(saleNum.Value.ToString()), idSeat, idCalendar);
-            if (result != 0)
+            if (txtBuyer.Text.Count() == 0)
             {
-                seatOrder.reloadSeatAfterCreatedTicketSuccess();
-                alertSuccess success = new alertSuccess("Cinema Ticket Manager Alert", "Created New Ticket Success!");
-                success.ShowDialog();
-                frmReportPrinter reportPrinter = new frmReportPrinter(result);
-                reportPrinter.ShowDialog();
-                this.Dispose();
-            }
-            else
-            {
-                alertDanger alert = new alertDanger("Cinema Ticket Manager Alert", "Created New Ticket Failt!");
+                alertDanger alert = new alertDanger("Created Ticket Alert", "Customer Name is null");
                 alert.ShowDialog();
+            } else
+            {
+                int result = dataContext.insertTicket(mainForm.userLogin.id, txtBuyer.Text, DateTime.Today, double.Parse(saleNum.Value.ToString()), idSeat, idCalendar);
+                if (result != 0)
+                {
+                    seatOrder.reloadSeatAfterCreatedTicketSuccess();
+                    alertSuccess success = new alertSuccess("Cinema Ticket Manager Alert", "Created New Ticket Success!");
+                    success.ShowDialog();
+                    frmReportPrinter reportPrinter = new frmReportPrinter(result);
+                    reportPrinter.ShowDialog();
+                    this.Dispose();
+                }
+                else
+                {
+                    alertDanger alert = new alertDanger("Cinema Ticket Manager Alert", "Created New Ticket Failt!");
+                    alert.ShowDialog();
+                }
             }
         }
 

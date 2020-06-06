@@ -34,7 +34,7 @@ namespace cinemaTicketManager.dialog
             if(calendarShow != null)
             {
                 filmName.Text = calendarShow.film;
-                showTime.Text = calendarShow.showDate.Month + "/" + calendarShow.showDate.Day + "/" + calendarShow.showDate.Year + " - "+ calendarShow.timeName + " - " + (calendarShow.timeBegin / 60 + "h" + calendarShow.timeBegin % 60);
+                showTime.Text = calendarShow.showDate.Month + "/" + calendarShow.showDate.Day + "/" + calendarShow.showDate.Year + "        -       Thời Gian: "+ calendarShow.timeName;
                 showRoom.Text = calendarShow.room;
                 txtPrice.Text = calendarShow.extraPrice + " $";
             }
